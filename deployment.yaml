@@ -1,0 +1,62 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: laganglas
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: template-nginx
+  namespace: laganglas
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: template
+    spec:
+      containers:
+      - name: nginx
+        image: evilben/laganglas-template-nginx
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
+            protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: laganglas
+  name: template
+  labels:
+    app: template
+spec:
+  selector:
+    app: template
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: template
+  namespace: laganglas
+  labels:
+    app: template
+  annotations:
+    kubernetes.io/tls-acme: "true"
+spec:
+  tls:
+  - hosts:
+    - "laganglas.fluidmedia.wales"
+    secretName: server-tls
+  rules:
+  - host: "laganglas.fluidmedia.wales"
+    http:
+      paths:
+      - path: "/"
+        backend:
+          serviceName: server
+          servicePort: 80
