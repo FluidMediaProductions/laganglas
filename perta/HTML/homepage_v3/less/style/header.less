@@ -1,0 +1,420 @@
+/* HEADER */
+
+#header {
+  position: relative;
+ 	padding: 28px 30px;
+  background: @uou-white;
+  font-family: @font-family-sans-serif;
+
+  @media (max-width: 420px) {
+		text-align: center;
+	}
+
+  .logo {
+  	position: absolute;
+
+  	@media (max-width: 1300px) {
+  		position: relative;
+  	}
+
+  	@media (max-width: 480px) {
+  		margin-bottom: 20px;
+  		float: none !important;
+
+  		img {
+  			margin: 0 auto;
+  		}
+  	}
+  }
+
+  .booking-form {
+  	position: relative;
+  	margin: 0 auto;
+  	display: block;
+  	text-align: center;
+
+  	@media (max-width: 1300px) {
+  		display: none;
+  	}
+
+  	span {
+					position: relative;
+					margin-right: 16px;
+					display: inline-block;
+					vertical-align: top;
+
+					&.input {
+						width: 200px;
+
+						@media (max-width: 1600px) {
+							width: 150px;
+						}
+
+						@media (max-width: 1360px) {
+							width: 120px;
+						}
+					}
+
+					&.calendar {
+						width: 200px;
+
+						@media (max-width: 1600px) {
+							width: 150px;
+						}
+
+						@media (max-width: 1360px) {
+							width: 120px;
+						}
+					}
+
+					&.select-box {
+						width: 130px;
+					}
+
+					&.submit-btn {
+						margin-right: 0;
+						width: 125px;
+						text-align: center;
+					}
+
+					input {
+						position: relative;
+						cursor: pointer;
+					}
+
+					.select-clone {
+						position: absolute;
+						left: 0;
+						right: 0;
+						display: none;
+						background: @uou-white;
+						border: 1px solid @uou-light-gray;
+						border-width: 0 1px 1px 1px;
+						z-index: 99;
+
+						li {
+							padding: 20px;
+							display: block;
+							border-bottom: 1px solid @uou-light-gray;
+							cursor: pointer;
+							color: @gray-dark;
+							text-transform: uppercase;
+							font-size: 13px;
+							text-align: left;
+
+							&:hover {
+								background: @uou-blue;
+								color: @uou-white;
+							}
+
+							&:last-child {
+								border-bottom: none;
+							}
+						}
+					}
+
+					.advanced {
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: -25px;
+						font-size: 11px;
+						color: @uou-white;
+						text-transform: uppercase;
+					}
+
+					.fa {
+						position: absolute;
+						padding: 5px;
+						margin-top: -10px;
+						right: 10px;
+						top: 50%;
+						color: @uou-gray;
+						cursor: pointer;
+					}
+				}
+  }
+
+  .contact-right {
+  	position: absolute;
+  	right: 30px;
+  	top: 28px;
+
+  	@media (max-width: 1300px) {
+  		position: relative;
+  		right: 0;
+  		top: 0;
+  	}
+
+  	@media (max-width: 480px) {
+  		float: none !important;
+  		text-align: center;
+  	}
+
+  	.header-booking {
+  		position: relative;
+  		margin-right: 15px;
+  		display: none;
+
+  		@media (max-width: 1300px) {
+  			display: inline-block;
+  		}
+
+  		.header-btn {
+  			width: 50px;
+  			height: 50px;
+  			display: inline-block;
+  			background: transparent;
+  			border: 1px solid @uou-light-gray;
+  			border-radius: 3px;
+  			.transition(.2s ease-in);
+
+  			&:hover,
+  			&.hover {
+  				background: @uou-light-gray;
+  			}
+
+  			.fa {
+  				color: @uou-gray;
+  			}
+  		}
+
+  		.booking-form {
+  			position: absolute;
+				top: 60px;
+				right: 0;
+				width: 220px;
+				display: none;
+				z-index: 9999;
+				background: @uou-white;
+				box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+				@media (max-width: 480px) {
+					right: -120px;
+				}
+
+				form {
+					padding: 20px 20px 0 20px;
+
+					span {
+						margin-bottom: 20px;
+						width: 100%;
+					}
+				}
+  		}
+  	}
+
+  	.header-social {
+  		position: relative;
+  		margin-right: 15px;
+  		display: inline-block;
+
+  		.header-btn {
+  			width: 50px;
+  			height: 50px;
+  			display: inline-block;
+  			background: transparent;
+  			border: 1px solid @uou-light-gray;
+  			border-radius: 3px;
+  			.transition(.2s ease-in);
+
+  			&:hover,
+  			&.hover {
+  				background: @uou-light-gray;
+  			}
+
+  			.fa {
+  				color: @uou-gray;
+  			}
+  		}
+
+  		.header-nav {
+				position: absolute;
+				padding-top: 19px;
+				top: 40px;
+				right: 0;
+				display: none;
+				z-index: 9999;
+
+				ul {
+					background: @uou-white;
+					box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+					li {
+
+						&:last-child a {
+							border-bottom: none;
+						}
+
+						a {	
+							padding: 15px 19px;
+							display: block;
+							border-bottom: 1px solid @uou-light-gray;
+							cursor: pointer;
+							color: @gray-dark;
+							text-transform: uppercase;
+							font-size: 13px;
+							text-align: center;
+
+							&:hover {
+								background: @uou-blue;
+								color: @uou-white;
+							}
+						}
+					}
+				}
+			}
+  	}
+
+  	.header-login {
+  		position: relative;
+  		margin-right: 12px;
+  		display: inline-block;
+
+  		.header-btn {
+  			width: 50px;
+  			height: 50px;
+  			display: inline-block;
+  			background: transparent;
+  			border: 1px solid @uou-light-gray;
+  			border-radius: 3px;
+  			.transition(.2s ease-in);
+
+  			&:hover,
+  			&.hover {
+  				background: @uou-light-gray;
+  			}
+
+  			.fa {
+  				color: @uou-gray;
+  			}
+  		}
+
+  		.header-form {
+				position: absolute;
+				padding-top: 19px;
+				top: 40px;
+				right: -17px;
+				display: none;
+				z-index: 99;
+
+				form {
+					padding: 30px;
+					width: 270px;
+					background: @uou-white;
+					box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+
+					.alert-message {
+						display: none;
+					}
+
+					.form-row {
+						margin-bottom: 20px;
+						text-align: left;
+
+						input {
+							width: 100%;
+						}
+
+						button {
+							width: 100%;
+							color: @uou-white;
+							border: 1px solid @uou-blue;
+						}
+
+						&.forgot-password {
+							margin: 0;
+						}
+
+						&.register {
+							margin: 0;
+						}
+					}
+				}
+			}
+  	}
+
+  	.header-menu {
+  		position: relative;
+  		display: inline-block;
+
+  		.header-btn {
+  			width: 50px;
+  			height: 50px;
+  			display: inline-block;
+  			background: transparent;
+  			border: 1px solid @uou-light-gray;
+  			border-radius: 3px;
+  			.transition(.2s ease-in);
+
+  			&:hover,
+  			&.hover {
+  				background: @uou-light-gray;
+  			}
+
+  			.fa {
+  				color: @uou-gray;
+  			}
+  		}
+
+  		.navbar-nav {
+				position: absolute;
+				top: 58px;
+				right: 0;
+				display: none;
+				width: 220px;
+				text-align: left !important;
+				float: none !important;
+				background: @uou-white;
+				box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+				z-index: 999;
+
+				li {
+					position: relative;
+					display: inline-block;
+					float: none !important;
+					width: 100%;
+
+					&:last-child a {
+						border-bottom: none;
+					}
+
+					&.active a {
+						color: @uou-blue;
+					}
+
+					.submenu-toggle {
+						display: none;
+					}
+
+					&.has-submenu {
+
+						ul {
+							position: absolute;
+							right: 220px;
+							top: 0;
+							width: 220px;
+							display: none;
+							background: @uou-white;
+							box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+						}
+					}
+
+					a {
+						padding: 20px 30px;
+						display: block;
+						font-size: 13px;
+						text-transform: uppercase;
+						border-bottom: 1px solid #EDEDED;
+
+						&:hover {
+							background: @uou-blue;
+							color: @uou-white;
+						}
+					}
+				}
+			}
+  	}
+  }
+}

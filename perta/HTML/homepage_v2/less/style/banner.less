@@ -1,0 +1,144 @@
+/* BANNER */
+
+#banner {
+	position: relative;
+	height: 100vh;
+	min-height: 650px;
+	background: @uou-gray url(../img/banner-bg.jpg) no-repeat center;
+	background-size: cover;
+	font-family: @font-family-sans-serif;
+
+	@media (max-width: @screen-sm) {
+		padding-top: 200px;
+	}
+
+	.container {
+		position: relative;
+		height: 100vh;
+		min-height: 650px;
+	}
+
+	.booking-form {
+		position: absolute;
+		left: -15px;
+		right: -15px;
+		bottom: 0;
+		padding: 40px;
+		text-align: center;
+		background: @uou-gray-dark;
+
+		@media (max-width: @screen-sm) {
+			position: relative;
+			margin: 0 15px;
+			left: auto;
+			right: auto;
+			bottom: auto;
+		}
+
+		span {
+			position: relative;
+			margin-right: 16px;
+			display: inline-block;
+			vertical-align: top;
+
+			&.calendar {
+				width: 220px;
+
+				@media (max-width: @screen-lg) {
+					width: 170px;
+				}
+
+				@media (max-width: @screen-md) {
+					margin-bottom: 30px;
+					width: 150px;
+				}
+
+				@media (max-width: @screen-sm) {
+					width: 100%;
+				}
+			}
+
+			&.select-box {
+				width: 200px;
+
+				@media (max-width: @screen-lg) {
+					width: 155px;
+				}
+
+				@media (max-width: @screen-md) {
+					margin-bottom: 30px;
+					width: 130px;
+				}
+
+				@media (max-width: @screen-sm) {
+					width: 100%;
+				}
+			}
+
+			&.submit-btn {
+				margin-right: 0;
+				width: 125px;
+				text-align: center;
+			}
+
+			input {
+				position: relative;
+				color: @uou-white;
+				background: rgba(255,255,255,.3);
+				border: 1px solid rgba(255,255,255,.5);
+				cursor: pointer;
+			}
+
+			.select-clone {
+				position: absolute;
+				left: 0;
+				right: 0;
+				display: none;
+				background: @uou-white;
+				border: 1px solid @uou-light-gray;
+				border-top: none;
+				z-index: 99;
+
+				li {
+					padding: 20px;
+					display: block;
+					border-bottom: 1px solid @uou-light-gray;
+					cursor: pointer;
+					color: @gray-dark;
+					text-transform: uppercase;
+					font-size: 13px;
+					text-align: left;
+
+					&:hover {
+						background: @uou-blue;
+						color: @uou-white;
+					}
+
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+
+			.advanced {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -25px;
+				font-size: 11px;
+				color: @uou-white;
+				text-transform: uppercase;
+			}
+
+			.fa {
+				position: absolute;
+				padding: 5px;
+				margin-top: -10px;
+				right: 10px;
+				top: 50%;
+				color: @uou-white;
+				cursor: pointer;
+			}
+		}
+	}
+}
