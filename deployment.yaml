@@ -9,7 +9,7 @@ metadata:
   name: template-nginx
   namespace: laganglas
 spec:
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
@@ -58,5 +58,5 @@ spec:
       paths:
       - path: "/"
         backend:
-          serviceName: server
+          serviceName: template
           servicePort: 80
